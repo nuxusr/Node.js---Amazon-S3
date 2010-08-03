@@ -4,7 +4,7 @@ var RealAWSAccessKeyId = '';
 var RealAWSSecretAccessKey = '';
 var RealHosts = '[bucket-name].s3.amazonaws.com'
 
-
+// note: these aren't real keys
 var AWSAccessKeyId = '0PN5J17HBGZHT7JJ3X82';
 var AWSSecretAccessKey = 'uV3F3YluFJax1cknvbcGwgjvx4QpvB+leU8dUj2o';
 
@@ -14,7 +14,6 @@ var nodeunit = require('caolan-nodeunit/lib/nodeunit');
 var sys = require('sys'),
     spawn = require('child_process').spawn,
 	fs = require('fs');
-	
 
 	
 	

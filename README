@@ -1,0 +1,32 @@
+
+Dallin Dyer 
+  
+A simple S3 library written because the other implementation doesn't meet needs and is outdated.
+
+
+What this library is good for:
+ 
+  	Send files of any size (although S3 is currently limited at 5 gigs)
+		- file upload and downloads are streamed with a progress event fired during writes.
+
+  	Minimal memory footprint and very efficient 
+		- Streams files from disk to socket -- using nodes drain/pause/resume to only stream what socket/stream can take 
+
+  	Uses net sockets on PUT requests to support 100 Continue (especially usefull for large files) 
+  		- the body is only sent after amazon approves the signed header
+
+	Creats MD5 of content (optional)
+		- ensure your data isn't corrupted during transmission
+
+  	Supports amazons new REDUCED_REDUNDANCY storage (cheaper but less reliable)
+		- see unit tests for examples
+
+  	Supports specifying acl
+		- see unit tests for examples
+
+  
+  
+Examples:
+	coming soon: check out / run unit tests for examples.
+  
+ 
